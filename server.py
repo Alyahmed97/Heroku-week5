@@ -1,4 +1,5 @@
 import model # Import the python file containing the ML model
+import os
 from flask import Flask, request, render_template,jsonify # Import flask libraries
 import pickle
 model1=pickle.load(open("model.pkl",'rb'))
@@ -30,4 +31,6 @@ def classify_type():
 
 # Run the Flask server
 if(__name__=='__main__'):
-    app.run(port=5000,debug=True) 
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+    
