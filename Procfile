@@ -1,1 +1,1 @@
-web: Falsk app:server.py
+web: falsk app:server.py
