@@ -1,1 +1,1 @@
-web: gunicorn app:heroku-deployment-assigment
+web: gunicorn server:app
