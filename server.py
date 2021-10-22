@@ -12,7 +12,7 @@ app = Flask(__name__)
 def home():
     return render_template('home.html') # Render home.html
 
-@app.route('/classify',methods=['POST'])
+@app.route('/classify',methods=['GET'])
 def classify_type():
     try:
         sepal_len = request.args.get('slen') # Get parameters for sepal length
